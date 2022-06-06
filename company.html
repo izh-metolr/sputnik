@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <link rel="icon" href="./img/favicon.ico">
+    <title>Sputnix</title>
+    <meta name="description" content="Описание сайта">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="header_logo">
+                        Sputnix
+                    </div>
+                    <div class="header_language">
+                        <p class="header_language__el">Ru</p>
+                        <a href="" class="header_language__el">En</a>
+                    </div>
+                    <div class="header_contacts">
+                        <a href="tel:8124014478" class="header_contacts-phone">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5456 14.14L13.4806 10.444C13.2884 10.2694 13.0359 10.1762 12.7764 10.1842C12.5168 10.1923 12.2706 10.3008 12.0896 10.487L9.69657 12.948C9.12057 12.838 7.96257 12.477 6.77057 11.288C5.57857 10.095 5.21757 8.934 5.11057 8.362L7.56957 5.968C7.75598 5.78713 7.86471 5.54082 7.87273 5.28121C7.88076 5.02159 7.78746 4.76904 7.61257 4.577L3.91757 0.512999C3.74261 0.320355 3.49945 0.203503 3.23972 0.187258C2.98 0.171014 2.72417 0.256657 2.52657 0.425999L0.356571 2.287C0.183682 2.46051 0.0804901 2.69145 0.0665705 2.936C0.0515705 3.186 -0.234429 9.108 4.35757 13.702C8.36357 17.707 13.3816 18 14.7636 18C14.9656 18 15.0896 17.994 15.1226 17.992C15.3671 17.9783 15.5979 17.8747 15.7706 17.701L17.6306 15.53C17.8006 15.333 17.8869 15.0774 17.871 14.8177C17.8551 14.558 17.7383 14.3148 17.5456 14.14Z" fill="#006DB0"/>
+                        </svg> 812 401 44 78
+                        </a>
+                        <a href="mailto:sales@sp-el.ru" class="header_contacts-mail">
+                            <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.0586 0H2.05859C1.52816 0 1.01945 0.210714 0.64438 0.585786C0.269307 0.960859 0.0585938 1.46957 0.0585938 2V14C0.0585938 14.5304 0.269307 15.0391 0.64438 15.4142C1.01945 15.7893 1.52816 16 2.05859 16H18.0586C18.589 16 19.0977 15.7893 19.4728 15.4142C19.8479 15.0391 20.0586 14.5304 20.0586 14V2C20.0586 1.46957 19.8479 0.960859 19.4728 0.585786C19.0977 0.210714 18.589 0 18.0586 0ZM18.0586 4.7L10.0586 10.034L2.05859 4.7V2.297L10.0586 7.63L18.0586 2.297V4.7Z" fill="#006DB0"/>
+                        </svg> sales@sp-el.ru
+                        </a>
+                    </div>
+                    <div class="header_action">
+                        <div class="header_action__btn-box">
+                            <button class="header_action__btn">
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.55859 4.5C4.55859 6.981 6.5776 9 9.0586 9C11.5396 9 13.5586 6.981 13.5586 4.5C13.5586 2.019 11.5396 0 9.0586 0C6.5776 0 4.55859 2.019 4.55859 4.5ZM17.0586 19H18.0586V18C18.0586 14.141 14.9176 11 11.0586 11H7.0586C3.19859 11 0.0585938 14.141 0.0585938 18V19H17.0586Z" fill="#006DB0"/>
+                                </svg>                            
+                                Личный кабинет
+                            </button>
+                            <div class="form-popup" id="login">
+                                <form action="">
+                                    <label for="interlogin">Логин:</label>
+                                    <input type="text" id="interlogin" name="login" class="login error" data-login="login" placeholder="Введите логин">
+                                    <label for="interlogin2">Пароль:</label>
+                                    <input type="password" id="interlogin2" name="password" class="password" data-password="password" placeholder="Введите пароль">
+                                    <input onclick="login();" type="submit" value="Войти" name="log_in">
+                                    <div class="form-popup__footer-error">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.0357 15.15C13.0129 15.8565 12.6141 16.2326 11.9532 16.2326C11.2581 16.2326 10.8707 15.8565 10.8365 15.1614L10.6769 9.96529C10.6428 9.2474 11.1669 8.73462 11.9418 8.73462C12.6939 8.73462 13.2408 9.2474 13.2067 9.97668L13.0357 15.15Z" fill="#EB5757"/>
+                                            <path d="M13.3548 18.7623C13.3548 19.5258 12.7281 20.0613 11.9532 20.0613C11.1669 20.0613 10.5288 19.5258 10.5288 18.7623C10.5288 18.0102 11.1555 17.4632 11.9532 17.4632C12.7395 17.4632 13.3548 17.9988 13.3548 18.7623Z" fill="#EB5757"/>
+                                            <path d="M10.8589 3.875C11.34 3.04167 12.5428 3.04167 13.0239 3.875L22.8589 20.9096C23.34 21.7429 22.7386 22.7846 21.7763 22.7846H2.10647C1.14422 22.7846 0.542813 21.7429 1.02394 20.9096L10.8589 3.875Z" stroke="#EB5757" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                        <p>Ошибка: введен неверный логин или пароль</p>
+                                    </div>
+                                    <div class="form-popup__footer">
+                                        <a class="form-popup__footer-link" href="">Нет аккаунта?</a>
+                                        <a class="form-popup__footer-link" href="">Забыли пароль?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="header_action__cart">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.19061 0.503998L2.47861 7H1.05861C0.904909 7.00017 0.753309 7.03573 0.615564 7.10393C0.47782 7.17213 0.35763 7.27113 0.264314 7.39327C0.170997 7.5154 0.107059 7.65738 0.0774561 7.80821C0.0478536 7.95904 0.0533819 8.11465 0.0936121 8.263L2.89261 18.526C3.00863 18.9491 3.26027 19.3224 3.60891 19.5886C3.95755 19.8549 4.38392 19.9994 4.82261 20H15.2956C16.1936 20 16.9876 19.395 17.2256 18.525L20.0246 8.262C20.0653 8.1136 20.0712 7.9578 20.0417 7.80677C20.0122 7.65574 19.9482 7.51358 19.8546 7.39138C19.7611 7.26919 19.6406 7.17028 19.5025 7.10239C19.3644 7.03449 19.2125 6.99945 19.0586 7H17.6386L13.9266 0.503998L12.1906 1.496L15.3356 7H4.78161L7.92661 1.496L6.19061 0.503998ZM12.0586 11H14.0586V16H12.0586V11ZM6.05861 11H8.05861V16H6.05861V11Z" fill="#006DB0"/>
+                        </svg>
+                            <a href="" class="header_action__cart">
+                                <span id="result_cart">25</span> - наименований</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="header-menu">
+                    <ul class="header-menu__list">
+                        <li class="header-menu__list-element">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="header-menu__list-element">
+                            <a href="">Продукция</a>
+                        </li>
+                        <li class="header-menu__list-element">
+                            <a href="">Производители</a>
+                        </li>
+                        <li class="header-menu__list-element">
+                            <a href="">Каналы поставок</a>
+                        </li>
+                        <li class="header-menu__list-element">
+                            <a href="">Доставка</a>
+                        </li>
+                        <li class="header-menu__list-element">
+                            <a href="">О компании</a>
+                        </li>
+                        <li class="header-menu__list-element">
+                            <a href="">Новости</a>
+                        </li>
+                        <li class="header-menu__list-element">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-bottom">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="6.20147" cy="6.64281" r="5.14286" stroke="#006DB0" stroke-width="1.25"/>
+                        <path d="M10.0586 10.9285L13.0586 13.9285" stroke="#006DB0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="search" id="id_of_input" class="ajax_pole" data-tipdevaisa="tipdevaisa" placeholder="Поиск по номеру изделия на мировых складах">
+                    <input type="submit" value="Поиск">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="">Главная</a>
+                        </li>
+                        <li>О компании</li>
+                    </ul>
+                </div>
+            </div>
+            <section class="section_newspage page_company">
+                <div class="container">
+                    <div class="page_company__left">
+                        <a class="fancybox2" href="https://sp-el.ru/images/ISO1-m.png"><img alt="ООО «СПЭЛ»" class="justifyright" src="https://sp-el.ru/images/ISO1-m.png"></a>
+
+                        <p class="sertificat_soot">Сертификат соответствия</p>
+                    </div>
+
+                    <div class="section_newspage__info">
+                        <h1>О компании</h1>
+
+                        <p>Компания СПЭЛ (Спутник Электроникс) - образована, как логистическая группа по поставкам электронных компонентов, комплектующих и оборудования для отечественных предприятий радиоэлектронной отрасли.<br>
+                        </p>
+
+                        <ul class="marker">
+                            <li>Собственная отработанная схема логистики и консолидирования товаров, позволяет нам предлагать, для наших клиентов минимальные сроки поставки оригинальной продукции мировых производителей радиоэлектроники, напрямую с американских
+                                и европейских складов электронных компонентов. </li>
+                            <li>Мы поставляем только оригинальную, сертифицированную продукцию. Поставляемые нами электронные компоненты, комплектующие и оборудование, находят применение в сферах производства товаров гражданского, промышленного и специального
+                                назначения. </li>
+                            <li>Для своих клиентов мы предлагаем, как поставки промышленных партий радиоэлектронных компонентов напрямую от производителей, так и экспресс поставки небольших партий, поставки уникальных компонентов малоизвестных производителей,
+                                а также сложные и дефицитные позиции.</li>
+                            <li>В компании проведено внедрение Системы Менеджмента Качества, применительно к оптовой торговле электронными компонентами и оборудованием для предприятий радиоэлектронной отрасли ГОСТ Р ИСО 9001-2015 (ISO 9001:2015).</li>
+                            <li>Собственная отработанная схема логистики и консолидирования товаров, позволяет нам предлагать, для наших клиентов минимальные сроки поставки оригинальной продукции мировых производителей радиоэлектроники, напрямую с американских
+                                и европейских складов электронных компонентов. </li>
+                        </ul>
+
+                        <div class="section_newspage__btn">
+                            <div class="contact_href"><a class="fl-align" href="/contacts/">Контакты 
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.0585938 5.5L6.05859 5.5L6.05859 0.5L13.0586 6.5L6.05859 12.5L6.05859 7.5L0.0585938 7.5V5.5Z" fill="#006DB0"/>
+                                </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer>
+            <div class="container">
+                <div class="footer-logo">
+                    <p class="footer-logo__el">Sputnix</p>
+                    <div class="footer-logo__text">
+                        Компоненты<br> Оборудование
+                        <br> Комплектующие
+                    </div>
+                </div>
+                <div class="footer-company">
+                    <h2>О компании</h2>
+                    <ul class="footer-company__list marker">
+                        <li><a href="">Информация</a></li>
+                        <li><a href="">Политика конфиденциальности</a></li>
+                        <li><a href="">Доставка</a></li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-maps-cart">
+                    <h2>Карта сайта</h2>
+                    <ul class="footer-maps-cart__list marker">
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Каталог</a></li>
+                        <li><a href="">Продукция</a></li>
+                        <li><a href="">Производители</a></li>
+                        <li><a href="">Каналы поставок</a></li>
+                        <li><a href="">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <h2>Контакты</h2>
+                    <div class="footer-contacts__line">
+                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.55861 0C4.14761 0 0.558614 3.589 0.558614 7.995C0.529614 14.44 8.25461 19.784 8.55861 20C8.55861 20 16.5876 14.44 16.5586 8C16.5586 3.589 12.9696 0 8.55861 0ZM8.55861 12C6.34861 12 4.55861 10.21 4.55861 8C4.55861 5.79 6.34861 4 8.55861 4C10.7686 4 12.5586 5.79 12.5586 8C12.5586 10.21 10.7686 12 8.55861 12Z" fill="#006DB0"/>
+                            </svg>
+                        <p>
+                            199106, Россия, Санкт-Петербург, Гаванская ул., д. 12, корп. 2, лит. Б, пом. 1-Н
+                        </p>
+                    </div>
+                    <div class="footer-contacts__line">
+                        <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5586 0H2.55859C2.02816 0 1.51945 0.210714 1.14438 0.585786C0.769307 0.960859 0.558594 1.46957 0.558594 2V14C0.558594 14.5304 0.769307 15.0391 1.14438 15.4142C1.51945 15.7893 2.02816 16 2.55859 16H18.5586C19.089 16 19.5977 15.7893 19.9728 15.4142C20.3479 15.0391 20.5586 14.5304 20.5586 14V2C20.5586 1.46957 20.3479 0.960859 19.9728 0.585786C19.5977 0.210714 19.089 0 18.5586 0ZM18.5586 4.7L10.5586 10.034L2.55859 4.7V2.297L10.5586 7.63L18.5586 2.297V4.7Z" fill="#006DB0"/>
+                            </svg>
+
+                        <a href="mailto:sales@sp-el.ru">
+                            sales@sp-el.ru
+                        </a>
+                    </div>
+                    <div class="footer-contacts__line">
+                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.0456 14.14L13.9806 10.444C13.7884 10.2693 13.5359 10.1762 13.2764 10.1842C13.0168 10.1922 12.7706 10.3008 12.5896 10.487L10.1966 12.948C9.62057 12.838 8.46257 12.477 7.27057 11.288C6.07857 10.095 5.71757 8.934 5.61057 8.362L8.06957 5.968C8.25598 5.78712 8.36471 5.54082 8.37273 5.2812C8.38076 5.02159 8.28746 4.76904 8.11257 4.57699L4.41757 0.512995C4.24261 0.320352 3.99945 0.203499 3.73972 0.187255C3.48 0.17101 3.22417 0.256653 3.02657 0.425995L0.856571 2.28699C0.683682 2.46051 0.58049 2.69145 0.566571 2.93599C0.551571 3.18599 0.265571 9.108 4.85757 13.702C8.86357 17.707 13.8816 18 15.2636 18C15.4656 18 15.5896 17.994 15.6226 17.992C15.8671 17.9783 16.0979 17.8747 16.2706 17.701L18.1306 15.53C18.3006 15.333 18.3869 15.0774 18.371 14.8177C18.3551 14.558 18.2383 14.3148 18.0456 14.14Z" fill="#006DB0"/>
+                        </svg>
+                        <a href="tel:8124014478">
+                            812 401 44 78
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="consultation">
+        <div class="modal__body">
+            <div class="modal__content">
+                <h2 class="modal__title">Запись на консультацию</h2>
+                <form action="#" method="POST" class="form modal__form" id="modal__form">
+                    <div class="form-elem">
+                        <input class="form-elem__area _required" type="text" id="user_name" name="user_name" placeholder=" ">
+                        <label class="form-elem__label" for="user_name">Имя</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area _required" type="tel" id="user_phone" name="user_phone" placeholder=" ">
+                        <label class="form-elem__label" for="user_phone">Номер телефона</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area _required" type="email" id="user_email" name="user_email" placeholder=" ">
+                        <label class="form-elem__label" for="user_email">E-mail</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area" type="text" id="user_company" name="user_company" placeholder=" ">
+                        <label class="form-elem__label" for="user_company">Название вашей компании</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area" type="text" id="user_working_pos" name="user_working_pos" placeholder=" ">
+                        <label class="form-elem__label" for="user_working_pos">Ваша должность</label>
+                    </div>
+                    <div class="form-elem">
+                        <textarea class="form-elem__area" type="text" id="user_message" name="user_message" placeholder=" "></textarea>
+                        <label class="form-elem__label" for="user_message">Комментарий</label>
+                    </div>
+                    <span class="modal__attention">Нажав на кнопку, вы соглашаетесь с обработкой персональных данных.</span>
+                    <button class="btn modal__submit" type="submit">Проконсультироваться</button>
+                </form>
+                <button class="modal__close">
+					<span></span>
+					<span></span>
+				</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="callback">
+        <div class="modal__body">
+            <div class="modal__content">
+                <h2 class="modal__title">Обратный звонок</h2>
+                <form action="#" method="POST" class="form modal__form" id="modal__form">
+                    <div class="form-elem">
+                        <input class="form-elem__area _required" type="text" id="user_name" name="name" placeholder=" ">
+                        <label class="form-elem__label" for="name">Имя</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area _required" type="tel" id="user_phone" name="phone" placeholder=" ">
+                        <label class="form-elem__label" for="phone">Номер телефона</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area _required" type="email" id="user_email" name="email" placeholder=" ">
+                        <label class="form-elem__label" for="email">E-mail</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area" type="text" id="user_company" name="company" placeholder=" ">
+                        <label class="form-elem__label" for="company">Название вашей компании</label>
+                    </div>
+                    <div class="form-elem">
+                        <input class="form-elem__area" type="text" id="user_working_pos" name="working_pos" placeholder=" ">
+                        <label class="form-elem__label" for="working_pos">Ваша должность</label>
+                    </div>
+                    <div class="form-elem">
+                        <textarea class="form-elem__area" type="text" id="user_message" name="message" placeholder=" "></textarea>
+                        <label class="form-elem__label" for="message">Комментарий</label>
+                    </div>
+                    <span class="modal__attention">Нажав на кнопку, вы соглашаетесь с обработкой персональных
+						данных.</span>
+                    <button class="btn modal__submit" type="submit">Проконсультироваться</button>
+                </form>
+                <button class="modal__close">
+					<span></span>
+					<span></span>
+				</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="./js/libs/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
